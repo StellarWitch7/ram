@@ -1,0 +1,57 @@
+{
+	"schemaVersion": 1,
+	"id": "ram",
+	"version": "${version}",
+	"name": "Random Access Mind",
+	"description": "Adds a simple RAM implementation for Trickster spells",
+	"authors": [
+		"StellarWitch7"
+	],
+	"contact": {
+		"homepage": "https://github,com/StellarWitch7/ram",
+		"sources": "https://github,com/StellarWitch7/ram"
+	},
+	"license": "MIT",
+	"icon": "assets/ram/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "stellarwitch7.ram.RandomAccessMind",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "stellarwitch7.ram.RandomAccessMindClient",
+				"adapter": "kotlin"
+			}
+		],
+		"cardinal-components": [
+			"stellarwitch7.ram.cca.entity.ModEntityComponents"
+		]
+	},
+	"custom": {
+		"cardinal-components": [
+			"ram:ram"
+		]
+	},
+	"mixins": [
+		"ram.mixins.json",
+		{
+			"config": "ram.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"libstellar": "1.0.0",
+		"trickster": "2.0.0-alpha.21"
+	},
+	"suggests": {
+	}
+}
