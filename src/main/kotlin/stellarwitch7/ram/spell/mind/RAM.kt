@@ -9,13 +9,13 @@ import stellarwitch7.libstellar.registry.codec.CodecTypeProvider
 import stellarwitch7.ram.RandomAccessMind
 
 interface RAM : CodecTypeProvider<RAM> {
-    fun malloc(source: Trick): UInt
+    fun alloc(source: Trick): UInt
 
-    fun free(address: UInt)
+    fun free(source: Trick, address: Int)
 
-    fun write(address: UInt, value: Fragment)
+    fun write(source: Trick, address: Int, value: Fragment)
 
-    fun read(address: UInt): Fragment
+    fun read(source: Trick, address: Int): Fragment
 
     companion object : CodecRegistrar<RAM> {
         override val modID: String = RandomAccessMind.MOD_ID

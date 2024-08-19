@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
+	id 'me.fallenbreath.yamlang' version '1.3.1'
 	id "org.jetbrains.kotlin.jvm" version "2.0.10"
 }
 
@@ -90,6 +91,7 @@ dependencies {
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-base:${property('deps.cardinal-components-api')}")
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${property('deps.cardinal-components-api')}")
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-chunk:${property('deps.cardinal-components-api')}")
+	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-world:${property('deps.cardinal-components-api')}")
 
 	modImplementation "maven.modrinth:trickster:${property('deps.trickster')}"
 	modImplementation "io.wispforest:accessories-fabric:${property('deps.accessories')}"
@@ -130,6 +132,11 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
 	}
+}
+
+yamlang {
+	targetSourceSets = [sourceSets.main]
+	inputDir = "assets/ram/lang"
 }
 
 // configure the maven publication

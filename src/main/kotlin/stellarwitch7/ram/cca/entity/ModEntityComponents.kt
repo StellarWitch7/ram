@@ -5,7 +5,6 @@ import stellarwitch7.libstellar.registry.cca.entity.CCAEntityComponentRegistrar
 import stellarwitch7.ram.RandomAccessMind
 import stellarwitch7.ram.cca.RAMComponent
 
-//TODO: something something private can't access Kotlin whatnot
 object ModEntityComponents : CCAEntityComponentRegistrar() {
     override val modID: String = RandomAccessMind.MOD_ID
 

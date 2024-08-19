@@ -27,8 +27,11 @@
 				"adapter": "kotlin"
 			}
 		],
-		"cardinal-components": [
-			"stellarwitch7.ram.cca.entity.ModEntityComponents"
+		"cardinal-components-entity": [
+			{
+				"value": "stellarwitch7.ram.cca.entity.ModEntityComponents",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"custom": {
@@ -50,7 +53,7 @@
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",
 		"libstellar": "1.0.0",
-		"trickster": "2.0.0-alpha.21"
+		"trickster": ">=2.0.0-alpha.22"
 	},
 	"suggests": {
 	}

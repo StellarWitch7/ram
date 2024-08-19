@@ -1,0 +1,6 @@
+trickster:
+  trick.ram:
+    alloc: Allocator's Ploy
+    free: Concierge's Ploy
+    read: Retrieval Ingress
+    write: Ploy of Caching

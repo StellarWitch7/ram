@@ -7,6 +7,7 @@ import dev.enjarai.trickster.spell.fragment.VoidFragment
 import dev.enjarai.trickster.spell.trick.Trick
 import stellarwitch7.libstellar.registry.codec.CodecType
 import stellarwitch7.libstellar.utils.KCodecUtils
+import stellarwitch7.ram.spell.trick.blunder.NotWithinRAMBoundsBlunder
 import stellarwitch7.ram.spell.trick.blunder.OutOfRAMBlunder
 
 open class DefaultRAM(val size: UInt) : RAM {
@@ -17,26 +18,36 @@ open class DefaultRAM(val size: UInt) : RAM {
         this.slots = slots.toTypedArray()
     }
 
-    override fun malloc(source: Trick): UInt {
+    override fun alloc(source: Trick): UInt {
         for ((i, slot) in slots.withIndex()) {
-            if (slot.free)
+            if (slot.free) {
                 slot.free = false
                 return i.toUInt()
+            }
         }
 
         throw OutOfRAMBlunder(source)
     }
 
-    override fun free(address: UInt) {
-        slots[address.toInt()].free = true
+    override fun free(source: Trick, address: Int) {
+        if (address < 0 || address >= slots.size)
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+
+        slots[address].free = true
     }
 
-    override fun write(address: UInt, value: Fragment) {
-        slots[address.toInt()].value = value
+    override fun write(source: Trick, address: Int, value: Fragment) {
+        if (address < 0 || address >= slots.size)
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+
+        slots[address].value = value
     }
 
-    override fun read(address: UInt): Fragment {
-        return slots[address.toInt()].value
+    override fun read(source: Trick, address: Int): Fragment {
+        if (address < 0 || address >= slots.size)
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+
+        return slots[address].value
     }
     
     companion object {
