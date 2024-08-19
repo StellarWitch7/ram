@@ -31,21 +31,21 @@ open class DefaultRAM(val size: UInt) : RAM {
 
     override fun free(source: Trick, address: Int) {
         if (address < 0 || address >= slots.size)
-            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address)
 
         slots[address].free = true
     }
 
     override fun write(source: Trick, address: Int, value: Fragment) {
         if (address < 0 || address >= slots.size)
-            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address)
 
         slots[address].value = value
     }
 
     override fun read(source: Trick, address: Int): Fragment {
         if (address < 0 || address >= slots.size)
-            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address.toDouble())
+            throw NotWithinRAMBoundsBlunder(source, slots.size.toUInt(), address)
 
         return slots[address].value
     }

@@ -1,8 +1,8 @@
 ```json
 {
   "title": "Random Access Mind",
-  "icon": "minecraft:barrel",
-  "category": "trickster:basics"
+  "icon": "minecraft:goat_horn",
+  "category": "trickster:tricks"
 }
 ```
 
