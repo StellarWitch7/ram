@@ -3,7 +3,7 @@
 	"id": "ram",
 	"version": "${version}",
 	"name": "Random Access Mind",
-	"description": "Adds a simple RAM implementation for Trickster spells",
+	"description": "An alternative Crow Mind for Trickster",
 	"authors": [
 		"StellarWitch7"
 	],
