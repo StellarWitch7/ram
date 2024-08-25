@@ -34,7 +34,6 @@ repositories {
 	maven {
 		url "https://maven.enjarai.dev/releases"
 	}
-
 	maven {
 		url "https://maven.enjarai.dev/mirrors"
 	}
@@ -94,7 +93,7 @@ dependencies {
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-world:${property('deps.cardinal-components-api')}")
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-block:${property('deps.cardinal-components-api')}")
 
-	modImplementation "maven.modrinth:trickster:${property('deps.trickster')}"
+	modImplementation "dev.enjarai:trickster:${property('deps.trickster')}"
 	modImplementation "io.wispforest:accessories-fabric:${property('deps.accessories')}"
 	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 
