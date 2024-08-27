@@ -166,7 +166,7 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
-	displayName = "${property('mod_version')} for Trickster ${property('deps.trickster')}"
+	displayName = "Random Access Mind ${property('mod_version')} for Trickster ${property('deps.trickster')}"
 	version = project.version
 	changelog = getRootProject().file("CHANGELOG.md").text
 	type = STABLE
