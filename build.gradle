@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
+	id "me.modmuss50.mod-publish-plugin" version "0.4.4"
 	id 'me.fallenbreath.yamlang' version '1.3.1'
 	id "org.jetbrains.kotlin.jvm" version "2.0.10"
 }
@@ -101,10 +102,10 @@ dependencies {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property("version", project.version)
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand("version": project.version)
 	}
 }
 
@@ -141,18 +142,75 @@ yamlang {
 
 // configure the maven publication
 publishing {
-	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
-			from components.java
+	repositories {
+		maven {
+			name = "enjaraiMaven"
+			url = "https://maven.enjarai.dev/releases"
+			credentials(PasswordCredentials)
+			authentication {
+				basic(BasicAuthentication)
+			}
 		}
 	}
 
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = group
+			artifactId = archivesBaseName
+			version = version
+
+			from components.java
+		}
 	}
+}
+
+publishMods {
+	file = remapJar.archiveFile
+	displayName = "${property('mod_version')} for Trickster ${property('deps.trickster')}"
+	version = project.version
+	changelog = getRootProject().file("CHANGELOG.md").text
+	type = STABLE
+	modLoaders.add("fabric")
+
+	def min = property('publish_target_min')
+	def max = property('publish_target_max')
+
+	if (providers.gradleProperty('modrinthToken').present) {
+		modrinth {
+			projectId = property('mod_modrinth')
+			accessToken = providers.gradleProperty('modrinthToken').get()
+
+			if (min == max) {
+				minecraftVersions.add(min)
+			} else {
+				minecraftVersionRange {
+					start = min
+					end = max
+				}
+			}
+
+			requires {
+				slug = "libstellar"
+			}
+			requires {
+				slug = "trickster"
+			}
+		}
+	}
+
+	if (providers.gradleProperty('githubToken').present) {
+		github {
+			repository = property('mod_github')
+			accessToken = providers.gradleProperty('githubToken').get()
+
+			commitish = property('git_branch')
+			tagName = project.version
+		}
+	}
+}
+
+tasks.register('publishAll') {
+	group 'publishing'
+	dependsOn 'publish'
+	dependsOn 'publishMods'
 }
