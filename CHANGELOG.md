@@ -1,1 +1,1 @@
-- Updated to Trickster 2.0.0-alpha.26
+- Updated to libstellar 1.1.7

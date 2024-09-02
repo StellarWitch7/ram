@@ -18,13 +18,13 @@ class RAMComponent : Component {
     constructor(blockEntity: BlockEntity)
 
     override fun readFromNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
-        val result = RAM.codec.codec().parse(NbtOps.INSTANCE, tag.get("ram"))
+        val result = RAM.codec.parse(NbtOps.INSTANCE, tag.get("ram"))
 
         if (result.hasResultOrPartial())
             ram = result.resultOrPartial().orElseThrow()
     }
 
     override fun writeToNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
-        tag.put("ram", RAM.codec.codec().encodeStart(NbtOps.INSTANCE, ram).result().orElseThrow())
+        tag.put("ram", RAM.codec.encodeStart(NbtOps.INSTANCE, ram).result().orElseThrow())
     }
 }

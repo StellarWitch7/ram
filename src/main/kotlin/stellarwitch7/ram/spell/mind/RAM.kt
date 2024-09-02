@@ -19,8 +19,7 @@ interface RAM : CodecTypeProvider<RAM> {
 
     companion object : CodecRegistrar<RAM> {
         override val modID: String = RandomAccessMind.MOD_ID
-        override val name: String = "ram"
-        override val registry: Registry<CodecType<RAM>> = makeReg()
+        override val registry: Registry<CodecType<RAM>> = makeReg("ram")
 
         val default = register("default", DefaultRAM.codec)
     }

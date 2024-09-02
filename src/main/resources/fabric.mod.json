@@ -58,7 +58,7 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",
-		"libstellar": "1.0.0",
+		"libstellar": "1.1.7",
 		"trickster": "2.0.0-alpha.26"
 	},
 	"suggests": {
