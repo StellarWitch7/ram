@@ -1,1 +1,1 @@
-- Updated to Trickster 2.0.0-alpha.31
+- Updated to Trickster 2.0.0-alpha.32
