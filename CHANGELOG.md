@@ -1,1 +1,1 @@
-- Updated to Trickster 2.0.0-alpha.35
+- Updated to Trickster 2.0.0-alpha.36 and marked as compatible with all versions above as stability is less of a concern now
