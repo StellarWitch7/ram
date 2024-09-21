@@ -3,7 +3,7 @@
 	"id": "ram",
 	"version": "${version}",
 	"name": "Random Access Mind",
-	"description": "An alternative Crow Mind for Trickster",
+	"description": "Miscellaneous additions for Trickster",
 	"authors": [
 		"StellarWitch7"
 	],
@@ -38,11 +38,18 @@
 				"value": "stellarwitch7.ram.cca.block.ModBlockComponents",
 				"adapter": "kotlin"
 			}
+		],
+		"cardinal-components-world": [
+			{
+				"value": "stellarwitch7.ram.cca.world.ModWorldComponents",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"custom": {
 		"cardinal-components": [
-			"ram:ram"
+			"ram:ram",
+			"ram:cells"
 		]
 	},
 	"mixins": [
