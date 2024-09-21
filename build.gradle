@@ -78,27 +78,13 @@ dependencies {
 
 	modImplementation "stellarwitch7:libstellar:${property('deps.libstellar')}"
 
-	annotationProcessor modImplementation("io.wispforest:owo-lib:${property('deps.owo-lib')}")
-	include "io.wispforest:owo-sentinel:${property('deps.owo-lib')}"
-
 	modImplementation "io.wispforest:lavender:${property('deps.lavender')}"
 	include modLocalRuntime("io.wispforest.lavender-md:owo-ui:0.1.2+1.21")
 
-	modImplementation("nl.enjarai:cicada-lib:${property('deps.cicada')}") {
-		exclude group: "net.fabricmc.fabric-api"
-	}
-
-	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-base:${property('deps.cardinal-components-api')}")
-	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${property('deps.cardinal-components-api')}")
-	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-chunk:${property('deps.cardinal-components-api')}")
-	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-world:${property('deps.cardinal-components-api')}")
-	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-block:${property('deps.cardinal-components-api')}")
-
 	modImplementation "dev.enjarai:trickster:${property('deps.trickster')}"
 	modImplementation "io.wispforest:accessories-fabric:${property('deps.accessories')}"
-	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 
-	modClientCompileOnly "maven.modrinth:sodium:${property('deps.sodium')}"
+	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 }
 
 processResources {
