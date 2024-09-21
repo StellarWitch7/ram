@@ -7,8 +7,8 @@ import dev.enjarai.trickster.spell.fragment.VoidFragment
 import dev.enjarai.trickster.spell.trick.Trick
 import stellarwitch7.libstellar.registry.codec.CodecType
 import stellarwitch7.libstellar.utils.KCodecUtils
-import stellarwitch7.ram.spell.trick.blunder.NotWithinRAMBoundsBlunder
-import stellarwitch7.ram.spell.trick.blunder.OutOfRAMBlunder
+import stellarwitch7.ram.spell.blunder.NotWithinRAMBoundsBlunder
+import stellarwitch7.ram.spell.blunder.OutOfRAMBlunder
 
 open class DefaultRAM(val size: UInt) : RAM {
     override val type: CodecType<RAM> = RAM.default

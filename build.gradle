@@ -36,21 +36,8 @@ repositories {
 	}
 
 	maven {
-		url 'https://maven.wispforest.io'
-	}
-
-	maven {
-		name = "Ladysnake Mods"
-		url = 'https://maven.ladysnake.org/releases'
-	}
-
-	maven {
 		name "Terraformers Maven"
 		url 'https://maven.terraformersmc.com'
-	}
-
-	maven {
-		url 'https://maven.shedaniel.me/'
 	}
 }
 
@@ -77,12 +64,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-language-kotlin:${property('deps.kotlin')}"
 
 	modImplementation "stellarwitch7:libstellar:${property('deps.libstellar')}"
-
-	modImplementation "io.wispforest:lavender:${property('deps.lavender')}"
-	include modLocalRuntime("io.wispforest.lavender-md:owo-ui:0.1.2+1.21")
-
 	modImplementation "dev.enjarai:trickster:${property('deps.trickster')}"
-	modImplementation "io.wispforest:accessories-fabric:${property('deps.accessories')}"
 
 	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 }
@@ -155,7 +137,7 @@ publishMods {
 	displayName = "Random Access Mind ${property('mod_version')} for Trickster ${property('deps.trickster')}"
 	version = project.version
 	changelog = getRootProject().file("CHANGELOG.md").text
-	type = STABLE
+	type = ALPHA
 	modLoaders.add("fabric")
 
 	def min = property('publish_target_min')

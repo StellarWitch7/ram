@@ -1,7 +1,7 @@
-package stellarwitch7.ram.spell.trick.blunder
+package stellarwitch7.ram.spell.blunder
 
 import dev.enjarai.trickster.spell.trick.Trick
-import dev.enjarai.trickster.spell.trick.blunder.TrickBlunderException
+import dev.enjarai.trickster.spell.blunder.TrickBlunderException
 import net.minecraft.text.MutableText
 
 class CellNotWithinWorldBlunder(source: Trick) : TrickBlunderException(source) {

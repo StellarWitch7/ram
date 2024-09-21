@@ -7,7 +7,7 @@ import dev.enjarai.trickster.spell.fragment.FragmentType
 import dev.enjarai.trickster.spell.fragment.VoidFragment
 import dev.enjarai.trickster.spell.trick.Trick
 import stellarwitch7.ram.cca.entity.ModEntityComponents
-import stellarwitch7.ram.spell.trick.blunder.RAMNotSupportedBlunder
+import stellarwitch7.ram.spell.blunder.RAMNotSupportedBlunder
 
 class RAMWriteTrick : Trick(Pattern.of(1, 4, 5, 8, 6, 3)) {
     override fun activate(ctx: SpellContext, fragments: List<Fragment>): Fragment {
