@@ -18,31 +18,31 @@
 		"main": [
 			{
 				"value": "stellarwitch7.ram.RandomAccessMind",
-				"adapter": "kotlin"
+				"adapter": "kotori_scala"
 			}
 		],
 		"client": [
 			{
 				"value": "stellarwitch7.ram.RandomAccessMindClient",
-				"adapter": "kotlin"
+				"adapter": "kotori_scala"
 			}
 		],
 		"cardinal-components-entity": [
 			{
 				"value": "stellarwitch7.ram.cca.entity.ModEntityComponents",
-				"adapter": "kotlin"
+				"adapter": "kotori_scala"
 			}
 		],
 		"cardinal-components-block": [
 			{
 				"value": "stellarwitch7.ram.cca.block.ModBlockComponents",
-				"adapter": "kotlin"
+				"adapter": "kotori_scala"
 			}
 		],
 		"cardinal-components-world": [
 			{
 				"value": "stellarwitch7.ram.cca.world.ModWorldComponents",
-				"adapter": "kotlin"
+				"adapter": "kotori_scala"
 			}
 		]
 	},
@@ -64,9 +64,9 @@
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*",
+		"kotori_scala": "*",
 		"libstellar": ">=1.1.8",
-		"trickster": ">=2.0.0-alpha.37"
+		"trickster": ">=2.0.0-alpha.39"
 	},
 	"suggests": {
 	}

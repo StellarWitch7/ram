@@ -44,7 +44,7 @@ Returns the fragment stored within the RAM slot at the given address.
 
 <|glyph@trickster:templates|trick-id=ram:write,title=Ploy of Caching|>
 
-number, any ->
+number, any -> any
 
 ---
 

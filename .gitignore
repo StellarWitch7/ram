@@ -44,3 +44,7 @@ replay_*.log
 # direnv
 .direnv/
 .envrc
+
+# metals
+.metals/
+.bloop/
