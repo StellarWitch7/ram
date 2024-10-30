@@ -10,5 +10,5 @@ object ModFragmentTypes extends Registrar[FragmentType[?]] {
   override val modID: String = RandomAccessMind.MOD_ID
   override val registry: Registry[FragmentType[?]] = FragmentType.REGISTRY
 
-  val cell: FragmentType[CellFragment] = register("cell", FragmentType(CellFragment.endec, OptionalInt.empty()))
+  val CELL: FragmentType[CellFragment] = register("cell", FragmentType(CellFragment.ENDEC, OptionalInt.empty()))
 }

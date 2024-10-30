@@ -19,5 +19,5 @@ object RAM extends CodecRegistrar[RAM] {
   override val modID: String = RandomAccessMind.MOD_ID
   override val registry: Registry[CodecType[RAM]] = makeReg("ram")
 
-  val default = register("default", DefaultRAM.codec)
+  val DEFAULT = register("default", DefaultRAM.codec)
 }

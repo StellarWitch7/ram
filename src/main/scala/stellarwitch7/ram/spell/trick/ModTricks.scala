@@ -14,19 +14,19 @@ object ModTricks extends Registrar[Trick] {
   override val registry: Registry[Trick] = Tricks.REGISTRY
 
   // ram
-  val alloc = register("alloc", RAMAllocTrick())
-  val free = register("free", RAMFreeTrick())
-  val read = register("read", RAMReadTrick())
-  val write = register("write", RAMWriteTrick())
+  val ALLOC = register("alloc", RAMAllocTrick())
+  val FREE = register("free", RAMFreeTrick())
+  val READ = register("read", RAMReadTrick())
+  val WRITE = register("write", RAMWriteTrick())
 
   // meta
-  val patternAsInt = register("pattern_as_int", PatternAsIntTrick())
-  val patternFromInt = register("pattern_from_int", PatternFromIntTrick())
-  val patternFromIntList = register("pattern_from_int_list", PatternFromIntListTrick())
-  val glyphFromSpellPart = register("glyph_from_spell_part", GlyphFromSpellPartTrick())
+  val PATTERN_AS_INT = register("pattern_as_int", PatternAsIntTrick())
+  val PATTERN_FROM_INT = register("pattern_from_int", PatternFromIntTrick())
+  val PATTERN_FROM_INT_LIST = register("pattern_from_int_list", PatternFromIntListTrick())
+  val GLYPH_FROM_SPELL_PART = register("glyph_from_spell_part", GlyphFromSpellPartTrick())
 
   // cell
-  val acquireCell = register("acquire_cell", AcquireCellTrick())
-  val readCell = register("read_cell", ReadCellTrick())
-  val writeCell = register("write_cell", WriteCellTrick())
+  val ACQUIRE_CELL = register("acquire_cell", AcquireCellTrick())
+  val READ_CELL = register("read_cell", ReadCellTrick())
+  val WRITE_CELL = register("write_cell", WriteCellTrick())
 }

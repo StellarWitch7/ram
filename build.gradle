@@ -46,6 +46,28 @@ repositories {
     }
 }
 
+sourceSets {
+    main {
+        scala {
+            setSrcDirs(["src/main/scala", "src/main/java"])
+
+        }
+        java {
+            setSrcDirs([])
+        }
+    }
+
+    //TODO: this doesn't work
+    //client {
+    //    scala {
+    //        setSrcDirs(["src/client/scala", "src/client/java"])
+    //    }
+    //    java {
+    //        setSrcDirs([])
+    //    }
+    //}
+}
+
 loom {
 	splitEnvironmentSourceSets()
 

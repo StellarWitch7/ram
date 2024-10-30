@@ -8,5 +8,5 @@ import stellarwitch7.ram.cca.world.ModWorldComponents
 
 class AcquireCellTrick extends Trick(Pattern.of(4, 6, 0, 4, 5)) {
   override def activate(ctx: SpellContext, fragments: java.util.List[Fragment]): Fragment =
-    ModWorldComponents.cells.get(ctx.source.getWorld()).acquireCell()
+    ModWorldComponents.CELLS.get(ctx.source.getWorld()).acquireCell()
 }

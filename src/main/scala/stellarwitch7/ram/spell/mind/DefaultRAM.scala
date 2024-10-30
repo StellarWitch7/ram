@@ -12,7 +12,7 @@ import com.mojang.serialization.Codec
 import scala.collection.JavaConverters._
 
 class DefaultRAM private(val size: Int, protected var slots: Array[RAMSlot]) extends RAM {
-  override val `type`: CodecType[RAM] = RAM.default
+  override val `type`: CodecType[RAM] = RAM.DEFAULT
 
   override def alloc(source: Trick): Int = {
     for ((slot, i) <- slots.view.zipWithIndex) {

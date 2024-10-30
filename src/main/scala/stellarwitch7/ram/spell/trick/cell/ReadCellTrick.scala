@@ -10,5 +10,5 @@ import scala.collection.JavaConverters._
 
 class ReadCellTrick extends Trick(Pattern.of(4, 6, 0, 4, 2)) {
   override def activate(ctx: SpellContext, fragments: java.util.List[Fragment]): Fragment =
-    expectInput(fragments, ModFragmentTypes.cell, 0).get(this, ctx.source.getWorld())
+    expectInput(fragments, ModFragmentTypes.CELL, 0).get(this, ctx.source.getWorld())
 }
