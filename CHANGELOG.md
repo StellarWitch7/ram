@@ -1,3 +1,2 @@
-- Updated to Trickster 2.0.0-alpha.37
-- Added a way to store values globally in the world
-- Added a handful of patterns for meta-programming
+- Updated to Trickster 2.0.0-alpha.39
+- Ported from Kotlin to Scala, making use of libstellar v2
