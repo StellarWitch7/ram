@@ -1,2 +1,1 @@
-- Updated to Trickster 2.0.0-alpha.39
-- Ported from Kotlin to Scala, making use of libstellar v2
+- Fixed an endec/codec issue causing (de)serialization issues
