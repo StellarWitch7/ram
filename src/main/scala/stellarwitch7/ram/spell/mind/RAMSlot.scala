@@ -3,7 +3,7 @@ package stellarwitch7.ram.spell.mind
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import dev.enjarai.trickster.spell.Fragment
-import io.wispforest.accessories.endec.CodecUtils
+import dev.enjarai.trickster.EndecTomfoolery
 
 /**
  * Represents a single slot within a Random Access Mind (RAM).
@@ -15,6 +15,6 @@ class RAMSlot(var free: Boolean, var value: Fragment) { }
 object RAMSlot {
   val codec: Codec[RAMSlot] = RecordCodecBuilder.create(builder => builder.group(
     Codec.BOOL.fieldOf("free").forGetter(_.free),
-    CodecUtils.ofEndec(Fragment.ENDEC).fieldOf("value").forGetter(_.value)
+    EndecTomfoolery.toCodec(Fragment.ENDEC).fieldOf("value").forGetter(_.value)
   ).apply(builder, RAMSlot(_, _)))
 }
