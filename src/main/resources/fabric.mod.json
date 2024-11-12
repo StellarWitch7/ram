@@ -1,73 +1,74 @@
 {
-	"schemaVersion": 1,
-	"id": "ram",
-	"version": "${version}",
-	"name": "Random Access Mind",
-	"description": "Miscellaneous additions for Trickster",
-	"authors": [
-		"StellarWitch7"
-	],
-	"contact": {
-		"homepage": "https://github,com/StellarWitch7/ram",
-		"sources": "https://github,com/StellarWitch7/ram"
-	},
-	"license": "MIT",
-	"icon": "assets/ram/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			{
-				"value": "stellarwitch7.ram.RandomAccessMind",
-				"adapter": "kotori_scala"
-			}
-		],
-		"client": [
-			{
-				"value": "stellarwitch7.ram.RandomAccessMindClient",
-				"adapter": "kotori_scala"
-			}
-		],
-		"cardinal-components-entity": [
-			{
-				"value": "stellarwitch7.ram.cca.entity.ModEntityComponents",
-				"adapter": "kotori_scala"
-			}
-		],
-		"cardinal-components-block": [
-			{
-				"value": "stellarwitch7.ram.cca.block.ModBlockComponents",
-				"adapter": "kotori_scala"
-			}
-		],
-		"cardinal-components-world": [
-			{
-				"value": "stellarwitch7.ram.cca.world.ModWorldComponents",
-				"adapter": "kotori_scala"
-			}
-		]
-	},
-	"custom": {
-		"cardinal-components": [
-			"ram:ram",
-			"ram:cells"
-		]
-	},
-	"mixins": [
-		"ram.mixins.json",
-		{
-			"config": "ram.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
-		"java": ">=21",
-		"fabric-api": "*",
-		"kotori_scala": "*",
-		"libstellar": ">=1.1.8",
-		"trickster": ">=2.0.0-alpha.39"
-	},
-	"suggests": {
-	}
+    "schemaVersion": 1,
+    "id": "ram",
+    "version": "${version}",
+    "name": "Random Access Mind",
+    "description": "Miscellaneous additions for Trickster",
+    "authors": [
+        "StellarWitch7"
+    ],
+    "contact": {
+        "homepage": "https://github,com/StellarWitch7/ram",
+        "sources": "https://github,com/StellarWitch7/ram",
+        "issues": "https://github.com/StellarWitch7/ram/issues"
+    },
+    "license": "MIT",
+    "icon": "assets/ram/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            {
+                "value": "stellarwitch7.ram.RandomAccessMind",
+                "adapter": "kotori_scala"
+            }
+        ],
+        "client": [
+            {
+                "value": "stellarwitch7.ram.RandomAccessMindClient",
+                "adapter": "kotori_scala"
+            }
+        ],
+        "cardinal-components-entity": [
+            {
+                "value": "stellarwitch7.ram.cca.entity.ModEntityComponents",
+                "adapter": "kotori_scala"
+            }
+        ],
+        "cardinal-components-block": [
+            {
+                "value": "stellarwitch7.ram.cca.block.ModBlockComponents",
+                "adapter": "kotori_scala"
+            }
+        ],
+        "cardinal-components-world": [
+            {
+                "value": "stellarwitch7.ram.cca.world.ModWorldComponents",
+                "adapter": "kotori_scala"
+            }
+        ]
+    },
+    "custom": {
+        "cardinal-components": [
+            "ram:ram",
+            "ram:cells"
+        ]
+    },
+    "mixins": [
+        "ram.mixins.json",
+        {
+            "config": "ram.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.11",
+        "minecraft": "~1.21",
+        "java": ">=21",
+        "fabric-api": "*",
+        "kotori_scala": "*",
+        "libstellar": ">=1.1.8",
+        "trickster": ">=2.0.0-beta.1"
+    },
+    "suggests": {
+    }
 }

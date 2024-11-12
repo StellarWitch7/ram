@@ -1,1 +1,1 @@
-- Fixed an endec/codec issue causing (de)serialization issues
+- Updated to Trickster 2.0.0-beta.1

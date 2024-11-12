@@ -20,20 +20,20 @@ public record CellFragment(UUID uuid) implements Fragment {
             CellFragment::new
     );
 
-	@Override
-	public FragmentType<?> type() {
+    @Override
+    public FragmentType<?> type() {
         return ModFragmentTypes$.MODULE$.CELL();
-	}
+    }
 
-	@Override
-	public Text asText() {
-		return Text.literal(uuid.toString());
-	}
+    @Override
+    public Text asText() {
+        return Text.literal(uuid.toString());
+    }
 
-	@Override
-	public BooleanFragment asBoolean() {
-		return BooleanFragment.TRUE;
-	}
+    @Override
+    public boolean asBoolean() {
+        return true;
+    }
 
     @Override
     public int getWeight() {
