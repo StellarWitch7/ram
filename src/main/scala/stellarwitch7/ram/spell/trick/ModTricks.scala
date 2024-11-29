@@ -7,7 +7,6 @@ import stellarwitch7.libstellar.registry.Registrar
 import stellarwitch7.ram.RandomAccessMind
 import stellarwitch7.ram.spell.trick.mind.*
 import stellarwitch7.ram.spell.trick.meta.*
-import stellarwitch7.ram.spell.trick.cell.*
 
 object ModTricks extends Registrar[Trick] {
   override val modID: String = RandomAccessMind.MOD_ID

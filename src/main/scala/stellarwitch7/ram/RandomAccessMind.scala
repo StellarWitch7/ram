@@ -3,7 +3,6 @@ package stellarwitch7.ram
 import net.fabricmc.api.ModInitializer
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import stellarwitch7.ram.spell.fragment.ModFragmentTypes
 import stellarwitch7.ram.spell.trick.ModTricks
 
 object RandomAccessMind extends ModInitializer {
