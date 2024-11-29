@@ -1,1 +1,3 @@
-- Updated to Trickster 2.0.0-beta.1
+- Updated to Trickster 2.0.0-beta.7
+- Removed cells as Trickster will have inter-spell communication in a future update of the core mod
+- Updated to libstellar 2.0.1 due to badly declared dependencies

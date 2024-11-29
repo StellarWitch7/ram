@@ -17,6 +17,5 @@ object RandomAccessMind extends ModInitializer {
     LOGGER.info("SIGSEGV")
 
     ModTricks.register()
-    ModFragmentTypes.register()
   }
 }

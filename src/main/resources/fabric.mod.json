@@ -39,18 +39,11 @@
                 "value": "stellarwitch7.ram.cca.block.ModBlockComponents",
                 "adapter": "kotori_scala"
             }
-        ],
-        "cardinal-components-world": [
-            {
-                "value": "stellarwitch7.ram.cca.world.ModWorldComponents",
-                "adapter": "kotori_scala"
-            }
         ]
     },
     "custom": {
         "cardinal-components": [
-            "ram:ram",
-            "ram:cells"
+            "ram:ram"
         ]
     },
     "mixins": [
@@ -66,8 +59,8 @@
         "java": ">=21",
         "fabric-api": "*",
         "kotori_scala": "*",
-        "libstellar": ">=1.1.8",
-        "trickster": ">=2.0.0-beta.1"
+        "libstellar": ">=2.0.1",
+        "trickster": ">=2.0.0-beta.7"
     },
     "suggests": {
     }

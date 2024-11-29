@@ -4,4 +4,4 @@ A simple add-on for [Trickster](https://github.com/enjarai/trickster) that imple
 In addition to Trickster, this mod depends on [libstellar](https://github.com/StellarWitch7/libstellar), my personal Kotlin library for making Fabric mods. 
 
 # Other additions
-Versions 2.0.0 and up include more than just RAM, providing other fun things such as world-space fragment storage and a handful of tricks for dealing with the unmentioned *pattern* fragments.
+Versions 2.0.0 and up include more than just RAM, providing a handful of tricks for dealing with pattern fragments.

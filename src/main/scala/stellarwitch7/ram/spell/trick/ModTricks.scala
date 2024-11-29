@@ -24,9 +24,4 @@ object ModTricks extends Registrar[Trick] {
   val PATTERN_FROM_INT = register("pattern_from_int", PatternFromIntTrick())
   val PATTERN_FROM_INT_LIST = register("pattern_from_int_list", PatternFromIntListTrick())
   val GLYPH_FROM_SPELL_PART = register("glyph_from_spell_part", GlyphFromSpellPartTrick())
-
-  // cell
-  val ACQUIRE_CELL = register("acquire_cell", AcquireCellTrick())
-  val READ_CELL = register("read_cell", ReadCellTrick())
-  val WRITE_CELL = register("write_cell", WriteCellTrick())
 }
