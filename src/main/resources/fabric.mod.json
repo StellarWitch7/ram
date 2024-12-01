@@ -59,7 +59,7 @@
         "java": ">=21",
         "fabric-api": "*",
         "kotori_scala": "*",
-        "libstellar": ">=2.0.1",
+        "libstellar": ">=2.0.2",
         "trickster": ">=2.0.0-beta.8"
     },
     "suggests": {
