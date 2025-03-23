@@ -9,7 +9,3 @@ trickster:
     pattern_from_int: 扩张之曲变
     pattern_from_int_list: 组点之曲变
     glyph_from_spell_part: 秃根之曲变
-
-    acquire_cell: 古玩家之技巧
-    read_cell: 档案员之辑流
-    write_cell: 档案员之技巧
